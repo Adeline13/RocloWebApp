@@ -1,0 +1,46 @@
+﻿@model RocloWebApp.Models.commande.Commande
+
+@{
+    ViewData["Title"] = "ModifierCommande";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Modifier la Commande</h1>
+
+<h4>Commande</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="ModifierCommande">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="idCommande" class="control-label"></label>
+                <input asp-for="idCommande" class="form-control" />
+                <span asp-validation-for="idCommande" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="date" class="control-label"></label>
+                <input asp-for="date" class="form-control" />
+                <span asp-validation-for="date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="quantite" class="control-label"></label>
+                <input asp-for="quantite" class="form-control" />
+                <span asp-validation-for="quantite" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="montantTotal" class="control-label"></label>
+                <input asp-for="montantTotal" class="form-control" />
+                <span asp-validation-for="montantTotal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

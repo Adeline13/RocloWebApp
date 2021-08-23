@@ -1,0 +1,166 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Bienvenue";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ROCLO-ACCUEIL</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/vendor/aos/aos.css" rel="stylesheet">
+    <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="~/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!--<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="~/lib/font-awesome/css/all.css" rel="stylesheet" />
+    <!-- Template Main CSS File -->
+    <link href="~/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top header-inner-pages">
+        <div class="container d-flex align-items-center justify-content-lg-between">
+
+            <h1 class="logo me-auto me-lg-0">
+                <a asp-controller="RocloFrontControleur" asp-action="Accueil">
+                    <img src="~/img/apple-touch-icon.png" /> ROCLO<span>.</span>
+                </a>
+            </h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a class="nav-link scrollto active" asp-controller="RocloFrontControleur" asp-action="Accueil">Accueil</a></li>
+                    <!--<li><a class="nav-link scrollto" href="#about">A propos</a></li>-->
+                    <li><a class="nav-link scrollto" asp-controller="RocloFrontControleur" asp-action="Service">Services</a></li>
+                    <li><a class="nav-link scrollto " asp-controller="RocloFrontControleur" asp-action="Materiel">Materiel</a></li>
+                    <li><a class="nav-link scrollto" asp-controller="RocloFrontControleur" asp-action="Contact">Contact</a></li>
+
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+            <div class="navbar d-flex align-content-end justify-content-end" style="width: 40%;">
+                <ul>
+                    <li class="dropdown text-center">
+                        <a class="btn" style="background-color: #5188ff; font-weight: normal; height: 39px;"><span>Inscription</span> <i class="bi bi-chevron-down p-2"></i></a>
+                        <ul>
+                            <!-- <li><a href="#">Drop Down 1</a></li> -->
+                            <li class="dropdown">
+                                <a href="#"><span> Inscrivez-vous en tant que : </span> <i class="bi bi-chevron-right"></i></a>
+                                <ul>
+                                    <li><a asp-controller="CollecteurControlleur" asp-action="Inscription" title="gerez vos activites et creer des partenariats sans avoir acheter la solution">Collecteur</a></li>
+                                    <li><a asp-controller="ClientControleur" asp-action="Inscription" title="Achetez l'une de nos soution et gerer vos activites en toute aisance">Client</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <a asp-controller="ConnexionControleur" asp-action="Connexion" class="get-started-btn scrollto">Connexion</a>
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main" role="main" class="pb-3">
+        @RenderBody()
+    </main>
+    <!-- End #main -->
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-info">
+                            <h3>ROCLO<span>.</span></h3>
+                            <p>
+                                AKWA Soudanaise <br>
+                                Douala, Cameroun<br><br>
+                                <strong>Téléphone:</strong> ...<br>
+                                <strong>Email:</strong> info@example.com<br>
+                            </p>
+                            <div class="social-links mt-3">
+                                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Liens Utiles</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="RocloFrontControleur" asp-action="Accueil">Accueil</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#about">A propos</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="RocloFrontControleur" asp-action="Service">Services</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Nos Services</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Vente des services ROCLO</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Pose de la solution</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Maintenance</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Formations</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Collecte des déchets plastiques</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright2021 <strong><span>ROCLO</span></strong>. Tous droits réservés
+            </div>
+            <div class="credits">
+
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+    <!-- Vendor JS Files -->
+    <script src="~/vendor/aos/aos.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="~/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="~/vendor/php-email-form/validate.js"></script>
+    <script src="~/vendor/purecounter/purecounter.js"></script>
+    <script src="~/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/site.js"></script>
+    <script src="~/js/main.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

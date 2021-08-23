@@ -1,0 +1,66 @@
+﻿@model IEnumerable<RocloWebApp.Models.bac.Bac>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Page Bac</h1><br />
+
+<p class="btn btn-primary">
+    <a class="text-light" asp-action="CreerBac">
+        <i class="fa fa-plus"></i> Ajouter
+    </a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <!--<th>
+                @Html.DisplayNameFor(model => model.idBac)
+            </th>-->
+            <th>
+                @Html.DisplayNameFor(model => model.longitude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.latitude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.quartier)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.region)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+           <!-- <td>
+                @Html.DisplayFor(modelItem => item.idBac)
+            </td>-->
+            <td>
+                @Html.DisplayFor(modelItem => item.longitude)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.latitude)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.quartier)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.region)
+            </td>
+            <td class="d-flex flex-row">
+
+                <a class="text-info btn-light m-1" asp-action="ModifierBac" asp-route-idBac="@item.idBac">
+                    <i class="far fa-edit"></i>
+                </a>
+                <form asp-action="SupprimerBac" asp-route-idBac="@item.idBac">
+                    <button class="border-0 btn-light text-danger m-1" title="Supprimer" type="submit"><i class="fa fa-trash"></i></button>
+                </form>
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

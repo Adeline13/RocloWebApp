@@ -1,0 +1,88 @@
+﻿@model RocloWebApp.Models.clients.Client
+
+@{
+    ViewData["Title"] = "Inscription client";
+    Layout = "~/Views/Shared/_Formulaire.cshtml";
+}
+
+
+<div class="container">
+    <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card-body p-0">
+
+            <div class="row">
+                <div class="col-lg-5 d-none d-lg-block bg-register-image">
+                    <img src="~/img/fomulaire/illustrehomme.jpg" class="h-100" />
+                </div>
+                <div class="col-lg-7">
+                    <div class="p-5">
+
+                        <div class="text-center">
+                            <h1 class="h4 text-gray-900 mb-4">Creer votre propre compte !</h1>
+                        </div>
+
+                        <form asp-action="Inscription" class="user">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <label class="control-label"></label>
+                                    <input asp-for="nom" type="text" class="form-control form-control form-control-user" id="exampleFirstName"
+                                                   placeholder="Nom de l'organisation"/>
+                                    <span asp-validation-for="nom" class="text-danger"></span>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="control-label"></label>
+                                    <input asp-for="email" type="email" class="form-control form-control-user" id="exampleInputEmail"
+                                                   placeholder="Addresse Email" />
+                                    <span asp-validation-for="email" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <label class="control-label"></label>
+                                    <input asp-for="telephone" type="text" class="form-control form-control-user" id="exampleTelephone"
+                                                   placeholder="Telephone" />
+                                    <span asp-validation-for="telephone" class="text-danger"></span>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="control-label"></label>
+                                    <input asp-for="quartier" type="text" class="form-control form-control-user" id="exampleTelephone"
+                                                   placeholder="Quartier" />
+                                    <span asp-validation-for="quartier" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label"></label>
+                                <input asp-for="region" type="text" class="form-control form-control-user" id="exampleLastName"
+                                               placeholder="Region" />
+                                <span asp-validation-for="region" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label"></label>
+                                <input asp-for="motDePasse" type="password" class="form-control form-control-user"
+                                               id="exampleInputPassword" placeholder="Mot de passe" />
+                                <span asp-validation-for="motDePasse" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="submit" value="Create" class="btn btn-primary btn-user btn-block"/>
+                            </div>
+                        </form>
+
+                        <hr>
+                        <div class="text-center">
+                            <a class="small" href="forgot-password.html">Mot de passe oublie ?</a>
+                        </div>
+                        <div class="text-center">
+                            <a class="small" asp-controller="RocloFrontControleur" asp-action="Connexion">Vous êtes dejà inscrit ? Connectez-vous !</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

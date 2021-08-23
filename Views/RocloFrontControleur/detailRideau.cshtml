@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewData["Title"] = "detailBac";
+    Layout = "~/Views/Shared/_Principal.cshtml";
+}
+
+<section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+            <h2> Rideau de bulles d'air </h2>
+            <ol>
+                <li><a asp-controller="RocloFrontControleur" asp-action="Accueil">Accueil</a></li>
+                <li><a asp-controller="RocloFrontControleur" asp-action="Materiel">Materiel</a></li>
+                <li>Details</li>
+            </ol>
+        </div>
+
+    </div>
+</section><!-- End Breadcrumbs -->
+<!-- ======= Portfolio Details Section ======= -->
+<section id="portfolio-details" class="portfolio-details">
+    <div class="container">
+
+        <div class="row gy-4">
+
+            <div class="col-lg-8">
+                <div class="portfolio-details-slider swiper-container">
+                    <div class="swiper-wrapper align-items-center">
+
+                        <div class="swiper-slide">
+                            <img src="~/img/materiel/IMG-20210826-WA0005.jpg" alt="">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="~/img/materiel/IMG-20210826-WA0005.jpg" alt="">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="~/img/materiel/IMG-20210826-WA0005.jpg" alt="">
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="portfolio-info">
+                    <h3>A propos</h3>
+                    <ul>
+                        <li><strong>Category</strong>: Rideau de bulles d'air </li>
+                        <li><strong>matière</strong>: Flexibe</li>
+                        <li><strong>Complement</strong>: Pompe à air + masse pour la stabilité du tuyau en profondeur de l'eau </li>
+                        <li><strong>Acheter la solution</strong>: <a asp-controller="RocloFrontControleur" asp-action="Contact">Ici</a></li>
+                    </ul>
+                </div>
+                <div class="portfolio-description">
+                    <h2>Description fonctionnelle</h2>
+                    <p>
+                        Le  rideau  de  bulles  d’air  est  un  moyen  simple  d'arrêter  la  pollution  plastique  qui  s'écoule  des  cours  d'eau  dans  l'océan.  <br />  <br />
+                        Un  compresseur  d'air  envoie  de  l'air  à  travers  un  tube  perforé  qui  traverse  en  diagonale  le  fond  du  canal,
+                        créant  un  flux  de  bulles  qui  piège  les  déchets  et  les  guide  vers  un  système  de  captage  ou  récepteurs  de  déchets .
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section><!-- End Portfolio Details Section -->

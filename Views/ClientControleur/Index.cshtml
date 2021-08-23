@@ -1,0 +1,76 @@
+﻿@model IEnumerable<RocloWebApp.Models.clients.Client>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Page Clients </h1>
+
+<p class="btn btn-primary">
+    <a asp-action="CreerClient" class="text-light">
+        <i class="fa fa-user-plus"></i> Ajouter
+    </a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <!--<th>
+                @Html.DisplayNameFor(model => model.idClient)
+            </th>-->
+            <th>
+                @Html.DisplayNameFor(model => model.nom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.telephone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.quartier)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.region)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.motDePasse)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <!--<td>
+                @Html.DisplayFor(modelItem => item.idClient)
+            </td>-->
+            <td>
+                @Html.DisplayFor(modelItem => item.nom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.telephone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.quartier)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.region)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.motDePasse)
+            </td>
+            <td class="d-flex flex-row">
+                <a class="text-info btn-light m-1" title="Modifier" asp-action="ModifierClient" asp-route-idClient="@item.idClient">
+                    <i class="far fa-edit"></i>
+                </a>
+                <form asp-action="SupprimerClient" asp-route-idClient="@item.idClient">
+                    <button class="border-0 btn-light text-danger m-1" title="Supprimer" type="submit"><i class="fa fa-trash"></i></button>
+                </form>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,77 @@
+﻿@model IEnumerable<RocloWebApp.Models.Collecteurs.Collecteur>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Page Collecteurs </h1>
+<br />
+
+<p class="btn btn-primary">
+    <a asp-action="CreerCollecteur" class="text-light">
+        <i class="fa fa-user-plus"></i> Ajouter
+    </a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <!-- <th>
+                 @Html.DisplayNameFor(model => model.idCollecteur)
+             </th>-->
+            <th>
+                @Html.DisplayNameFor(model => model.nom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.telephone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.quartier)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.region)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.motDePasse)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <!-- <td>
+                     @Html.DisplayFor(modelItem => item.idCollecteur)
+                 </td>-->
+                <td>
+                    @Html.DisplayFor(modelItem => item.nom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.telephone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.quartier)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.region)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.motDePasse)
+                </td>
+                <td class="d-flex flex-row">
+                    <a class="text-info btn-light m-1" title="Modifier" asp-action="ModifierCollecteur" asp-route-idCollecteur="@item.idCollecteur">
+                        <i class="far fa-edit"></i>
+                    </a>
+                    <form asp-action="SupprimerCollecteur" asp-route-idCollecteur="@item.idCollecteur">
+                        <button class="border-0 btn-light text-danger m-1" title="Supprimer" type="submit"><i class="fa fa-trash"></i></button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

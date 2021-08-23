@@ -1,0 +1,41 @@
+﻿@model RocloWebApp.Models.produits.Produit
+
+@{
+    ViewData["Title"] = "CreerProduit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>CreerProduit</h1>
+
+<h4>Produit</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreerProduit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="idProduit" class="control-label"></label>
+                <input asp-for="idProduit" class="form-control" />
+                <span asp-validation-for="idProduit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="type" class="control-label"></label>
+                <input asp-for="type" class="form-control" />
+                <span asp-validation-for="type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="prixUnitaire" class="control-label"></label>
+                <input asp-for="prixUnitaire" class="form-control" />
+                <span asp-validation-for="prixUnitaire" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Créer" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Retour à la liste</a>
+</div>
+

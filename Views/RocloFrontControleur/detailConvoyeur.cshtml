@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewData["Title"] = "detailBac";
+    Layout = "~/Views/Shared/_Principal.cshtml";
+}
+
+<section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+            <h2> Convoyeur </h2>
+            <ol>
+                <li><a asp-controller="RocloFrontControleur" asp-action="Accueil">Accueil</a></li>
+                <li><a asp-controller="RocloFrontControleur" asp-action="Materiel">Materiel</a></li>
+                <li>Details</li>
+            </ol>
+        </div>
+
+    </div>
+</section><!-- End Breadcrumbs -->
+<!-- ======= Portfolio Details Section ======= -->
+<section id="portfolio-details" class="portfolio-details">
+    <div class="container">
+
+        <div class="row gy-4">
+
+            <div class="col-lg-8">
+                <div class="portfolio-details-slider swiper-container">
+                    <div class="swiper-wrapper align-items-center">
+
+                        <div class="swiper-slide">
+                            <img src="~/img/materiel/IMG-20210826-WA0005.jpg" alt="">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="~/img/materiel/IMG-20210826-WA0005.jpg" alt="">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="~/img/materiel/IMG-20210826-WA0005.jpg" alt="">
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="portfolio-info">
+                    <h3>A propos</h3>
+                    <ul>
+                        <li><strong>Category</strong>: Convoyeur </li>
+                        <li><strong>matière</strong>: Plastique</li>
+                        <li><strong>Contenance</strong>: ...</li>
+                        <li><strong>Acheter la solution</strong>: <a asp-controller="RocloFrontControleur" asp-action="Contact">Ici</a></li>
+                    </ul>
+                </div>
+                <div class="portfolio-description">
+                    <h2>Description fonctionnelle</h2>
+                    <p>
+                        Le  tapis  roulant  pour  la  collecte  des  déchets  piégés  par  le  rideau et   leur  acheminement  dans  le  bac  posé  à  terre.  Il  s’agit  d’un  système  de  convoyeur  élévateur  à  entraînement  extrémité  et  denté.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section><!-- End Portfolio Details Section -->

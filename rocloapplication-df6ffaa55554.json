@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "rocloapplication",
+  "private_key_id": "df6ffaa555549dc020be0c5afcc9ae2c773a71bb",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCqcoS0zTWY32lB\nHO1eRS3eKMLqQqE5wd2kiQXdJQd8q9JDd0oZEYzaZmOh+0m6cB+JPsTe6nZYDTkc\np0T0TNmWEFhFBRkgbBFEoou0VbORiCLQbTnPy4n3/Lg6QHS2SOqDaA4i7zXFNjtQ\nScOkTenK1Y9rofSqSt7w2TKRl0SbwvkfCv1x34MvHfP1CcgqlXef4wJLXFq5Dgiv\nDP4uWW67v4R/dCfz8pBR2ci1nCFbiiV01GMb8BO4SEaGxQ98CTD8rnSp/0SObPeZ\nMF+nz5cwPorsUcpynhFU1v/ZDYa37GP6QKbvA+o3Jc+a7xe2jwY+oPKazsafkksa\nSdBC7pqHAgMBAAECggEAAj7WXsEnc0m+ydqc5vWPt1vCYpNm9Mwu1QFVLNpFxg28\nCFGnKP158Q+ollRzM+qHC7WJLlWWvYEo6NVJao31aloBC5IIVefnh3wsptZneDgH\nYSRfePMifDCkgRpB0z3aVv/1leYU8hDRPmdthdP0RgcOrK8goSkHExGZNBWpNtT9\nqhMX4FsVhVqmCERfXPLduB1mmDkx1y2T9pDWhSLpv59AynZdNZ//vCRvgVC47s9i\n80uvyxOPQ9ab2FV0nx4vaNhD7DLoB1Of5mJqKixpxGOFN5sfhgsercW0Y1m9XVGL\n1bCGTKgZLxG02dRL2YK4nhwLyyhwzqympmgAUcHX3QKBgQDTX8ekevOfvzkDC0bZ\nGynO0w0c9NWGsGa3rxpG2y9aZkGDmO7xoRoH9f1OaKXPQfEC9KfhGqE/L11c2+i+\nH53ACyogW4HTw8YTE96gJp+HjkaGiMhFZcM0k5maoHwksNARbe9ZCXSZz5jrhDbT\nb0OSB1cJBkkQRyO22BaTmQkdywKBgQDObsBy2QxxM0+qDMceRZB9NJZXHISpbr1p\n9np0wKsHHYlrAUShSArT+xOjgQNUWHr1E4MMe32xvRv5w2rvJAOvqOauo+re2U06\n7Zs6NydxpuEZv9yjhNKGjnV90JzHmdeG+U7+bq5K7qpYcdSSHG/mbBz76GINNOGS\n05NB0iRetQKBgQCUBF1kc+kIc7rzw8DQJbJoL+jd3yFrmTnE5Sysc668SiEUi1LA\nCAWXj43bi3KZKV8hp7ur6Z8DBSMG9MQN50vrgKX2VL4cUdrx3xcl5QYPwfTnHv/H\ngRRqS/XjjwCAHQUHP4m9Ot7ZGsPGISbXdvHFX7h2DF27tWVwE+/zWdZFcwKBgQCb\n07CEQWGKBgCpzdF1AXALg2nFQirGN2jWFw/jGBlCWsKDusZStK4vzETL1LRttAjE\n/UCcaI++XpFCnYgYEuiRbf8Mb4H5TLFmvTvC2yV0PlOHe3QTH01H8zuviI0AgxnV\nslY169i3iaee8fZTgRHbL1tFsOprK7LngbyUIAwCTQKBgFuAmMDFk0ISohBzQUov\nerxVg6VxZqiYqe+Cf6VrefeWNFqYhYG6p2vMxKtDlsCa7fD3woAQNy99EmfprBTt\nrLTtYH8nknYrawzSJ/f8snz7TzPIzH4oM1708MYFwkOb+apkLU8zmFbhsPNCyNhf\nYMVajuwJ/vi+q5nR2IIZN98O\n-----END PRIVATE KEY-----\n",
+  "client_email": "rocloapplication@appspot.gserviceaccount.com",
+  "client_id": "109813456113737334104",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/rocloapplication%40appspot.gserviceaccount.com"
+}

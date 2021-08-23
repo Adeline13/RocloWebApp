@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewData["Title"] = "Contact";
+    Layout = "~/Views/Shared/_Principal.cshtml";
+}
+
+<section class="breadcrumbs">
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+            <h2></h2>
+            <ol>
+                <li><a asp-controller="RocloFrontControleur" asp-action="Accueil">Accueil</a></li>
+                <li>Page Contact</li>
+            </ol>
+        </div>
+
+    </div>
+</section>
+<!-- ======= Contact Section ======= -->
+<section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h1></h1>
+            <p>Nous contacter</p>
+        </div>
+
+        <div class="row mt-5">
+
+            <div class="col-lg-4">
+                <div class="info">
+                    <div class="address">
+                        <i class="bi bi-geo-alt"></i>
+                        <h4>Localisation:</h4>
+                        <p>...</p>
+                    </div>
+
+                    <div class="email">
+                        <i class="bi bi-envelope"></i>
+                        <h4>Email:</h4>
+                        <p>info@example.com</p>
+                    </div>
+
+                    <div class="phone">
+                        <i class="bi bi-phone"></i>
+                        <h4>Téléphone:</h4>
+                        <p>...</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-8 mt-5 mt-lg-0">
+                <!--<iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>-->
+                <iframe class="float-end" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15919.46135111236!2d9.694611!3d4.0478836!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8a89f5180f9d6f57!2sORANGE%20DIGITAL%20CENTER!5e0!3m2!1sfr!2scm!4v1629277191760!5m2!1sfr!2scm" width="600" height="450" style="border:0;" allowfullscreen loading="lazy"></iframe>
+            </div>
+
+        </div>
+
+        <div class="d-flex" style="margin-top: 50px; padding-top: 50px; box-shadow: 0 0 6px black; width: 100%; ">
+            <form action="" method="post" role="form" class="php-email-form" style="width: 80%; padding: 20px; margin: auto;">
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Votre nom" required>
+                    </div>
+                    <div class="col-md-6 form-group mt-3 mt-md-0">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Votre Email" required>
+                    </div>
+                </div>
+                <div class="form-group mt-3">
+                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Objet" required>
+                </div>
+                <div class="form-group mt-3">
+                    <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                </div>
+                <div class="my-3">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Votre message a bien été envoyé. Merci!</div>
+                </div>
+                <div class="text-center"><button type="submit">Envoyer</button></div>
+            </form>
+
+        </div>
+    </div>
+</section><!-- End Contact Section -->

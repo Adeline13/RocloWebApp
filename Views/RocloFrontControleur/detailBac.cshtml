@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewData["Title"] = "detailBac";
+    Layout = "~/Views/Shared/_Principal.cshtml";
+}
+
+<section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+            <h2>Bac intelligent </h2>
+            <ol>
+                <li><a asp-controller="RocloFrontControleur" asp-action="Accueil">Accueil</a></li>
+                <li><a asp-controller="RocloFrontControleur" asp-action="Materiel">Materiel</a></li>
+                <li>Details</li>
+            </ol>
+        </div>
+
+    </div>
+</section><!-- End Breadcrumbs -->
+<!-- ======= Portfolio Details Section ======= -->
+<section id="portfolio-details" class="portfolio-details">
+    <div class="container">
+
+        <div class="row gy-4">
+
+            <div class="col-lg-8">
+                <div class="portfolio-details-slider swiper-container">
+                    <div class="swiper-wrapper align-items-center">
+
+                        <div class="swiper-slide">
+                            <img src="~/img/materiel/IMG-20210826-WA0005.jpg" alt="">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="~/img/materiel/IMG-20210826-WA0005.jpg" alt="">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="~/img/materiel/IMG-20210826-WA0005.jpg" alt="">
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="portfolio-info">
+                    <h3>A propos</h3>
+                    <ul>
+                        <li><strong>Category</strong>: Bac </li>
+                        <li><strong>matière</strong>: Plastique</li>
+                        <li><strong>Contenance</strong>: ...</li>
+                        <li><strong>Acheter la solution</strong>: <a asp-controller="RocloFrontControleur" asp-action="Contact">Ici</a></li>
+                    </ul>
+                </div>
+                <div class="portfolio-description">
+                    <h2>Description fonctionnelle</h2>
+                    <p>
+                        Un  bloc  de  signalisation  permettra  de   donner l’état  du  système  s’il  reçoit  assez  d’énergie  électrique  du  bloc  d’alimentation  et  si  le   badge passé  dessus  lui  donne  accès  au  contenu  d’un  bac  ou  s’il  n’est  pas  autorisé.
+                        Le  bloc  de   contrôle  de  niveau  permet  de  donner  les  informations  nécessaires  sur  le  taux  de  remplissage  des  bacs  de  chaque  coin  et  un  bloc  de  géolocalisation  pour  donner  les  informations  sur  la  position  géographique  de  chaque  lieu.  <br />  <br />
+                        Ces  données-là  seront  envoyées  par  un  bloc  d’acquisition  et  de  transmission des  données  afin  qu’elles  soient  acheminées  vers  notre  Datacenter  puis  publiées  sur   notre  application.
+                        Ce  bras  doit  être  capable  de  récupérer  les  déchets  au  niveau  du   sol  pour  les  mettre  dans  un  bac.  <br />
+
+<p id="bras">
+                        Le  bac  sur  terre  sera  muni  d’un  bras  râteau pour   le  ramassage  des  déchets  sur  terre  
+                        à  proximité  du  cours  d’eau.  Ce  bras  électronique  sera  manipulé  à  distance
+                        via  une  télécommande  qui  contrôle les  mouvements  du  bras.
+                    </p>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section><!-- End Portfolio Details Section -->

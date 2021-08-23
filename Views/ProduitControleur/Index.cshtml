@@ -1,0 +1,49 @@
+﻿@model IEnumerable<RocloWebApp.Models.produits.Produit>
+
+@{
+    ViewData["Title"] = "Nos Produits ROCLO";
+}
+
+<h1>Page Produits </h1><br />
+
+<p class="btn btn-primary">
+    <a class="text-light" asp-action="CreerProduit">
+        <i class="fa fa-plus"></i> Ajouter
+    </a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idProduit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.prixUnitaire)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.idProduit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.prixUnitaire)
+            </td>
+            <td class="d-flex flex-row">
+                <a class="btn-light text-danger m-1" asp-action="SupprimerProduit" asp-route-idProduit="@item.idProduit" title="Supprimer">
+                    <i class="fa fa-trash"></i>
+                </a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

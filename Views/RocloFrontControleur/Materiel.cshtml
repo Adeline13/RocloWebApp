@@ -1,0 +1,177 @@
+﻿
+@{
+    ViewData["Title"] = "Materiel";
+    Layout = "~/Views/Shared/_Principal.cshtml";
+}
+
+<!-- ======= Breadcrumbs ======= -->
+<section class="breadcrumbs">
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+            <h2></h2>
+            <ol>
+                <li><a asp-controller="RocloFrontControleur" asp-action="Accueil">Accueil</a></li>
+                <li> Materiel </li>
+            </ol>
+        </div>
+
+    </div>
+</section>
+<!-- End Breadcrumbs -->
+
+<!-- ======= Portfolio Section ======= -->
+<section id="portfolio" class="portfolio">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Materiel</h2>
+            <img src="~/img/img/innovation-concept-illustration_114360-5768.webp" />
+            <p> Consulter Notre équipement </p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-12 d-flex justify-content-center">
+                <ul id="portfolio-flters">
+                    <li data-filter="*" class="filter-active"> Tout </li>
+                    <li data-filter=".filter-app"> Bac </li>
+                    <li data-filter=".filter-card"> Convoyeur </li>
+                    <li data-filter=".filter-web"> Rideau de bulles d'air </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                <div class="portfolio-wrap">
+                    <img src="~/img/materiel/IMG-20210826-WA0005.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                        <h4>Bac</h4>
+                        <p>Bac</p>
+                        <div class="portfolio-links">
+                            <a href="~/img/materiel/IMG-20210826-WA0005.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Bac intelligent"><i class="bx bx-plus"></i></a>
+                            <a asp-controller="RocloFrontControleur" asp-action="detailBac" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                <div class="portfolio-wrap">
+                    <img src="~/img/materiel/RIDEAU/Masse1.JPG" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                        <h4> Masse </h4>
+                        <p>Rideau de bulles d'air</p>
+                        <div class="portfolio-links">
+                            <a href="~/img/materiel/RIDEAU/Masse1.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                            <a asp-controller="RocloFrontControleur" asp-action="detailRideau" title="Détails"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                <div class="portfolio-wrap">
+                    <img src="~/img/materiel/IMG-20210826-WA0005.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                        <h4>Bac</h4>
+                        <p>Bac</p>
+                        <div class="portfolio-links">
+                            <a href="~/img/materiel/IMG-20210826-WA0005.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+                            <a asp-controller="RocloFrontControleur" asp-action="detailBac" title="Détails"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                <div class="portfolio-wrap">
+                    <img src="~/img/materiel/Convoyeur/Support.JPG" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                        <h4>Support</h4>
+                        <p>Convoyeur</p>
+                        <div class="portfolio-links">
+                            <a href="~/img/materiel/Convoyeur/Support.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                            <a asp-controller="RocloFrontControleur" asp-action="detailConvoyeur" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                <div class="portfolio-wrap">
+                    <img src="~/img/materiel/RIDEAU/Tuyau.JPG" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                        <h4>Tuyau</h4>
+                        <p>Rideau de bulles d'air</p>
+                        <div class="portfolio-links">
+                            <a href="~/img/materiel/RIDEAU/Tuyau.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
+                            <a asp-controller="RocloFrontControleur" asp-action="detailRideau" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                <div class="portfolio-wrap">
+                    <img src="~/img/materiel/IMG-20210826-WA0005.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                        <h4>Bac</h4>
+                        <p> Bac </p>
+                        <div class="portfolio-links">
+                            <a href="~/img/materiel/IMG-20210826-WA0005.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
+                            <a asp-controller="RocloFrontControleur" asp-action="detailBac" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                <div class="portfolio-wrap">
+                    <img src="~/img/materiel/Convoyeur/Poulie simple.JPG" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                        <h4> Poulie simple</h4>
+                        <p>Convoyeur</p>
+                        <div class="portfolio-links">
+                            <a href="~/img/materiel/Convoyeur/Poulie simple.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                            <a asp-controller="RocloFrontControleur" asp-action="detailConvoyeur" title="Détails"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                <div class="portfolio-wrap">
+                    <img src="~/img/materiel/Convoyeur/Assembly tapis roclo.JPG" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                        <h4> Tapis roulant </h4>
+                        <p>Convoyeur</p>
+                        <div class="portfolio-links">
+                            <a href="~/img/materiel/Convoyeur/Assembly tapis roclo.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Tapis roulant"><i class="bx bx-plus"></i></a>
+                            <a asp-controller="RocloFrontControleur" asp-action="detailConvoyeur" title="Détails"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                <div class="portfolio-wrap">
+                    <img src="~/img/materiel/RIDEAU/Assem.JPG" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                        <h4>Rideau de bulles d'air</h4>
+                        <p>Rideau de bulles d'air</p>
+                        <div class="portfolio-links">
+                            <a href="~/img/materiel/RIDEAU/Assem.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                            <a asp-controller="RocloFrontControleur" asp-action="detailRideau" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><br /><br />
+
+        <video controls="controls" class="float-end">
+            <source src="~/videos/Wash.mp4" type="video/mp4" />
+        </video>
+    </div>
+</section><!-- End Portfolio Section -->

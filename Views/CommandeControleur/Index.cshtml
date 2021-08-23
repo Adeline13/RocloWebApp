@@ -1,0 +1,58 @@
+﻿@model IEnumerable<RocloWebApp.Models.commande.Commande>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Page Commandes</h1><br />
+
+<p class="btn btn-primary">
+    <a asp-action="CreerCommande" class="text-light">
+    <i class="fa fa-plus"></i> Enregistrez une Commande
+    </a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idCommande)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.quantite)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.montantTotal)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.idCommande)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.quantite)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.montantTotal)
+            </td>
+            <td class="d-flex flex-row">
+                <a class="text-info btn-light m-1" title="Modifier" asp-action="ModifierCommande" asp-route-idCommande="@item.idCommande">
+                    <i class="far fa-edit"></i>
+                </a>
+                <form asp-action="SupprimerCommande" asp-route-idCommande="@item.idCommande">
+                    <button class="border-0 btn-light text-danger m-1" title="Supprimer" type="submit"><i class="fa fa-trash"></i></button>
+                </form>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

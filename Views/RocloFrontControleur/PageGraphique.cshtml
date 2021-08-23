@@ -1,0 +1,175 @@
+﻿
+@{
+    ViewData["Title"] = "PageGraphique";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section>
+    <h1> Tableau de bord </h1>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+   <!-- <div class="col-lg-8 mt-5 mt-lg-0">
+        <!--<if     rame style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>->
+        <iframe class="float-end" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15919.46135111236!2d9.694611!3d4.0478836!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8a89f5180f9d6f57!2sORANGE%20DIGITAL%20CENTER!5e0!3m2!1sfr!2scm!4v1629277191760!5m2!1sfr!2scm" width="800" height="400" style="border:0;" allowfullscreen loading="lazy"></iframe>
+    </div>-->
+    <div class="row">
+        <!--   <p> Positionnement des bacs </p>-->
+        <div id="map"></div>
+        <script>
+            let map;
+            function initMap() {
+
+                map = new google.maps.Map(document.getElementById("map"), {
+                    center: {
+                        lat: 4.0481725,
+                        lng: 9.6931939
+                    },
+                    zoom: 12,
+                });
+
+                /* map = new google.maps.Map(document.getElementById("map"), {
+                     center: {
+                         lat: 4.045470,
+                         lng: 9.709780
+                     },
+                     zoom: 12,
+                 });*/
+            }
+        </script>
+
+        <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3LUx2R5X8yblsQdVodOdgC82J0enJQeo&callback=initMap&libraries=&v=weekly"
+                async></script>
+        <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=&v=weekly&channel=2"
+                    async></script>-->
+    </div>
+
+    <!----------------------------------------------->
+    <!-- <section>
+         <p> line chart</p>
+         <div class="chartdiv h-25 w-75"></div>
+     </section>
+    <!-----------------------------------------------
+    <style>
+        .highcharts-figure, .highcharts-data-table table {
+            min-width: 310px;
+            max-width: 800px;
+        }
+
+        #container {
+            height: 400px;
+        }
+
+        .highcharts-data-table table {
+            font-family: Verdana, sans-serif;
+            border-collapse: collapse;
+            border: 1px solid #EBEBEB;
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .highcharts-data-table caption {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .highcharts-data-table th {
+            font-weight: 600;
+            padding: 0.5em;
+        }
+
+        .highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+            padding: 0.5em;
+        }
+
+        .highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+            background: #f8f8f8;
+        }
+
+        .highcharts-data-table tr:hover {
+            background: #f1f7ff;
+        }
+    </style>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+        <p class="highcharts-description">
+            Ce graphe présente une comparaison des ventes du matériel ROCLO entre les différents clients.
+        </p>
+    </figure>
+    <script>
+        Highcharts.chart('container', {
+            title: {
+                text: 'Graphe de comparaison'
+            },
+            xAxis: {
+                categories: ['Janvier', 'Fevrier', 'Mars', 'Avril', 'Mai']
+            },
+            labels: {
+                items: [{
+                    html: 'Frequence des Ventes',
+                    style: {
+                        left: '50px',
+                        top: '18px',
+                        color: ( // theme
+                            Highcharts.defaultOptions.title.style &&
+                            Highcharts.defaultOptions.title.style.color
+                        ) || 'black'
+                    }
+                }]
+            },
+            series: [{
+                type: 'column',
+                name: 'Entreprises',
+                data: [3, 2, 1, 3, 4]
+            }, {
+                type: 'column',
+                name: 'Collecteurs',
+                data: [2, 3, 5, 7, 6]
+            }, {
+                type: 'column',
+                name: 'Communes',
+                data: [4, 3, 3, 9, 0]
+            }, {
+                type: 'spline',
+                name: 'Moyenne',
+                data: [3, 2.67, 3, 6.33, 3.33],
+                marker: {
+                    lineWidth: 2,
+                    lineColor: Highcharts.getOptions().colors[3],
+                    fillColor: 'white'
+                }
+            }, {
+                type: 'pie',
+                name: 'Total consumption',
+                data: [{
+                    name: 'Jane',
+                    y: 13,
+                    color: Highcharts.getOptions().colors[0] // Jane's color
+                }, {
+                    name: 'John',
+                    y: 23,
+                    color: Highcharts.getOptions().colors[1] // John's color
+                }, {
+                    name: 'Joe',
+                    y: 19,
+                    color: Highcharts.getOptions().colors[2] // Joe's color
+                }],
+                center: [100, 80],
+                size: 100,
+                showInLegend: false,
+                dataLabels: {
+                    enabled: false
+                }
+            }]
+        });
+
+    </script>-->
+</section>
+

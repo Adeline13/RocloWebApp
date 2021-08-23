@@ -1,0 +1,57 @@
+﻿@model IEnumerable<RocloWebApp.Models.admin.Admin>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Page Admins </h1>
+
+<p class="btn btn-primary">
+    <a class="text-light" asp-action="Ajouter">
+        <i class="fa fa-user-plus"></i>
+        Ajouter
+    </a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <!--<th>
+                @Html.DisplayNameFor(model => model.idAdmin)
+            </th>-->
+            <th>
+                @Html.DisplayNameFor(model => model.nom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.motDePasse)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <!--<td>
+                    @Html.DisplayFor(modelItem => item.idAdmin)
+                </td>-->
+                <td>
+                    @Html.DisplayFor(modelItem => item.nom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.motDePasse)
+                </td>
+                <td class="d-flex flex-row">
+
+                    <!--  <a asp-action="AfficherAdmin" asp-route-idAdmin="@item.idAdmin">Afficher</a>-->
+                    <a class="btn-light text-info m-1" asp-action="ModifierAdmin" asp-route-idAdmin="@item.idAdmin">
+                        <i class="far fa-edit"></i>
+                    </a>
+                    <form asp-action="SupprimerAdmin" asp-route-idAdmin="@item.idAdmin">
+                        <button class="border-0 btn-light text-danger m-1" title="Supprimer" type="submit"><i class="fa fa-trash"></i></button>
+                    </form>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
