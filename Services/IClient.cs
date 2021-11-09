@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace RocloWebApp.Services
 {
+    interface IClient
     public interface IClient
     {
 

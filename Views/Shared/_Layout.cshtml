@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - RocloWebApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <!--<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link href="~/img/favicon.png" rel="icon">
@@ -35,14 +36,20 @@
                 <nav id="navbar2" class="navbar navbar-expand-sm navbar-light h-100 border-bottom box-shadow flex-column vh-100 text-white" style="width : 300px;">
                     <div class="container flex-column text-left">
                         <a class="navbar-brand w-100 text-center" asp-area="" asp-controller="RocloFrontControleur" asp-action="Accueil">Roclo Web App</a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">RocloWebApp</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
                         <div class="collapse d-sm-inline-flex flex-sm-row-reverse ">
                             <ul id="marge" class="navbar-nav flex-column nav-pills">
 
-                                <li class="nav-item">
+                        <li class="nav-item">
                                     <a class="nav-link  oi oi-list-rich" asp-area="" asp-controller="RocloFrontControleur" asp-action="PageGraphique"><i class="fas fa-tachometer-alt"></i>  Tableau de bord </a>
                                 </li>
                                 <li class="nav-item">
@@ -59,12 +66,14 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link oi oi-list-rich" asp-area="" asp-controller="CommandeControleur" asp-action="Index"><i class="fas fa-cash-register"></i> Commande</a>
-                                </li>
-                                <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                                     <a class="nav-link oi oi-list-rich" asp-area="" asp-controller="ProduitControleur" asp-action="Index"><i class="fa fa-cogs" aria-hidden="true"></i> Produit</a>
-                                </li>
-                            </ul>
-                        </div>
+                        </li>
+                    </ul>
+                </div>
                     </div>
                 </nav>
             </div>
@@ -82,18 +91,27 @@
                             <a class="nav-link oi oi-list-rich" asp-area="" asp-controller="RocloFrontControleur" asp-action="Accueil"><i class="fa fa-info-circle fa-fw" aria-hidden="true"></i> A propos</a>
                         </li>
                     </ul>
-                </div>
-            </nav>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
             <main role="main" class="container" id="main">
-                @RenderBody()
-            </main>
-        </div>
+            @RenderBody()
+        </main>
+    </div>
     </div>
 
     <!--<footer class="border-top footer text-muted">
+    <footer class="border-top footer text-muted">
         <div class="container">
+            &copy; 2021 - RocloWebApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
             &copy; 2021 - RocloWebApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Aide</a>
         </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
     </footer>-->
 
     @RenderSection("Scripts", required: false)

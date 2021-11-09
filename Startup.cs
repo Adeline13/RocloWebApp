@@ -1,5 +1,3 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using System.IdentityModel.Tokens.Jwt;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -76,6 +74,7 @@ namespace RocloWebApp
            // services.AddDbContext<rocloapplication>(options =>
                   //  options.UseSqlServer(Configuration.GetConnectionString("rocloapplication")));
         }
+
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {

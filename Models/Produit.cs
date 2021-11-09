@@ -9,6 +9,7 @@ namespace RocloWebApp.Models.produits
     [FirestoreData]
     public class Produit
     {
+        public string typeProduit { get; set; }
         public string idProduit { get; set; }
         [FirestoreProperty]
         public string type { get; set; }

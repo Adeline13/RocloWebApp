@@ -12,7 +12,9 @@ namespace RocloWebApp.Models.admin
         public string idAdmin { get; set; }
         [FirestoreProperty]
         public string nom { get; set; }
+        public int idAdmin { get; set; }
         [FirestoreProperty]
+        public string motDePasseAdmin { get; set; }
         public string motDePasse { get; set; }
     }
 }

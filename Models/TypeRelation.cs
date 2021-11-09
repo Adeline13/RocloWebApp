@@ -9,6 +9,7 @@ namespace RocloWebApp.Models.typeRelation
     [FirestoreData]
     public class TypeRelation
     {
+        public int idType { get; set; }
         public string idType { get; set; }
         [FirestoreProperty]
         public string type { get; set; }

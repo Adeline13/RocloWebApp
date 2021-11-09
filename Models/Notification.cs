@@ -9,6 +9,7 @@ namespace RocloWebApp.Models.notifications
     [FirestoreData]
     public class Notification
     {
+        public int idNotification { get; set; }
         public string idNotification { get; set; }
         [FirestoreProperty]
         public string typeNotification { get; set; }

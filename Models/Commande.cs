@@ -11,10 +11,12 @@ namespace RocloWebApp.Models.commande
     [FirestoreData]
     public class Commande
     {
+        public DateTime dateCommande { get; set; }
         public string idCommande { get; set; }
         [FirestoreProperty]
         public DateTime date { get; set; }
         [FirestoreProperty]
+        public int quantiteCommande { get; set; }
         public int quantite { get; set; }
         [FirestoreProperty]
         public int montantTotal { get; set; }
